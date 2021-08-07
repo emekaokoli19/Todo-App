@@ -1,0 +1,63 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: white;
+    font-size: 30px;
+}
+p{
+    color: white;
+    font-size: 25px;
+}
+a{
+    font-size: 20px;
+}
+form{
+    background-color: white;
+    float: right;
+    position: relative;
+    right: 38%;
+    bottom: 70px;
+    width: 400px;
+    height: 320px;
+    margin: 120px 0 0 500px;
+    border-radius: 25px;
+    padding: 20px;
+}
+label{
+    margin-left: 20px;
+    width: 100%;
+    margin-top: 25px;
+    font-size: large;
+    font-weight: 600;
+}
+input{
+    width: 90%;
+    border-radius: 10px;
+    height: 30px;
+    padding: 20px;
+}
+button{
+    width: 100%;
+    background-color: black;
+    color: white;
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 80px;
+    border: none;
+    font-size: larger;
+}
+#error-id{
+    width: 90%;
+    padding: 0;
+    margin: 10px 0 10px 0;
+    background-color: blue;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+

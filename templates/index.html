@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}"/>
+    <script src="{{url_for('static', filename='index.js')}}"></script>
+</head>
+<body>
+    <h1>Todo App by Emeka</h1>
+    <form id="form" action="/add" onsubmit="return validate()" method="post">
+        <div id="error-id" class="text-center"></div>
+        <div>
+            <label for="title">Task Title</label>
+            <input type="text" id="field" name="title" placeholder="Enter task..."></input>
+            <button type="submit">Add Task</button>
+        </div>
+    </form>
+    {%for todo in list_%}
+       <p>{{todo.id}}.  {{todo.title}}</p>
+       <a onclick="myclick()" href="/complete/{{todo.id}}">Complete</a>
+       <a href="/delete/{{todo.id}}">Delete</a>
+
+   {% endfor %}
+</body>
+</html>
