@@ -3,8 +3,9 @@ from datetime import timedelta
 from flask_socketio import SocketIO
 from flask_sqlalchemy import SQLAlchemy
 
+import os
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///test_db.sqlite" if os.getenv('TEST_ENV') else "sqlite:///db.sqlite"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 app.secret_key = "emeka"
